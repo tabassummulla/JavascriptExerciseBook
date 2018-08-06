@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+
+
+<body>
+ <script>
+
+alert("Hello World!");
+
+var name ="Tabassum Mulla";
+alert(name);
+console.log(name);
+document.write(name);
+
+document.write("<br>");
+document.write("</br>");
+
+function square(number1){
+
+return number1*number1;
+
+}
+
+document.write(square(2));
+
+
+document.write("<br>");
+document.write("</br>");
+
+function sum(inta,intb,intc){
+    return inta + intb +intc;
+}
+
+document.write(sum(1,2,3));
+
+document.write("<br>");
+document.write("</br>");
+
+var person = {name :"Tabs",
+              age: 21 , 
+              occupation : "Software Engineer"};
+
+
+document.write(person.name);
+document.write("<br>");
+document.write(person.age);
+document.write("<br>");
+document.write(person.occupation);
+document.write("</br>");
+
+document.write("<br>");
+document.write("</br>");
+
+var person = {name: "David",
+             age: 19,
+             occupation: "Student"};
+
+document.write(person.name);
+document.write("<br>");
+document.write(person.age);
+document.write("<br>");
+document.write(person.occupation);
+document.write("</br>");
+
+
+
+function increaseAge(person) {
+
+person.age +=1;
+document.write(person.age);
+
+}
+
+
+function createPerson(person) {
+
+person.name = document.getElementById("nameInput");
+person.age = document.getElementById("ageInput");
+person.occupation = document.getElementById("occupationInput");
+
+
+
+}
+
+
+</script>
+<br>
+
+<button onclick="increaseAge(person)"> Increase age </button>
+</br>
+<br> </br>
+
+Name <input type="text"  id ="nameInput" name ="name">
+<br> </br>
+Age <input type="text" id ="ageInput" name ="age">
+<br></br>
+Occupation <input type="text" id ="occupationInput" name ="occupation">
+</br>
+<br> </br>
+<button> Sumbit </button>
+
+</body>
+
+
+</html>
