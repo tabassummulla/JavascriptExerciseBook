@@ -7,8 +7,11 @@
 
 
 
-<body>
+<body font= "Arial" style="height:4000px;">
+
  <script>
+
+
 
 alert("Hello World!");
 
@@ -37,8 +40,12 @@ function sum(inta,intb,intc){
 }
 
 document.write(sum(1,2,3));
+document.write("<br>");   
 
-document.write("<br>");
+document.write("<br>");              
+document.write("<strong>");
+document.write("Person 1");
+document.write("</strong>");
 document.write("</br>");
 
 var person = {name :"Tabs",
@@ -54,6 +61,9 @@ document.write(person.occupation);
 document.write("</br>");
 
 document.write("<br>");
+document.write("<strong>");
+document.write("Person 2" );
+document.write("</strong>");
 document.write("</br>");
 
 var person = {name: "David",
@@ -72,39 +82,113 @@ document.write("</br>");
 function increaseAge(person) {
 
 person.age +=1;
-document.write(person.age);
+document.getElementById("incage").innerHTML =person.age;
+}
+
+
+function createPerson() {
+   
+   person.name = document.getElementById("nameInput").value;
+   person.age = document.getElementById("ageInput").value;
+   person.occupation = document.getElementById("occupationInput").value;
+
+ document.getElementById("obj").innerHTML= "Name : " + person.name + " , Age :" +person.age + " , Occupation :" + person.occupation;
 
 }
 
 
-function createPerson(person) {
+    
+function convertToCaps() {
 
-person.name = document.getElementById("nameInput");
-person.age = document.getElementById("ageInput");
-person.occupation = document.getElementById("occupationInput");
+var a = "He said 'My name is Elliott'  ";
+var cap = a.toUpperCase();
+document.getElementById("caps").innerHTML = cap;
 
+}
+
+
+function conCat() {
+
+var string = "My favourite Number is... ";
+var number = 7
+var output = string + number;
+document.getElementById("cat").innerHTML = output;
+
+}
+
+var arrayone = ["One","Two","Three"];
+
+function printArrayOne(arrayone) {
+document.getElementById("parray").innerHTML=arrayone;
+}
+
+function addToArray() {
+arrayone.push("Four");  
+document.getElementById("addarray").innerHTML=arrayone;
+return arrayone; 
+
+}
+
+
+function removeLast(arrayone){
+arrayone.pop();
+document.getElementById("remove").innerHTML=arrayone;
+}
+
+function checkAge(person) {
+
+if (person.age >=20 && person.age <=40 )  {
+    document.getElementById("check").innerHTML= "true";
+}
+else {
+           document.getElementById("check").innerHTML= "false";
+ }
 
 
 }
+
+
 
 
 </script>
 <br>
-
 <button onclick="increaseAge(person)"> Increase age </button>
+<p id="incage"> </p>
 </br>
-<br> </br>
 
-Name <input type="text"  id ="nameInput" name ="name">
+<strong> Name : </strong> <input type="text"  id ="nameInput" name ="name">
 <br> </br>
-Age <input type="text" id ="ageInput" name ="age">
+<strong> Age : </strong> <input type="text" id ="ageInput" name ="age">
 <br></br>
-Occupation <input type="text" id ="occupationInput" name ="occupation">
-</br>
-<br> </br>
-<button> Sumbit </button>
+<strong> Occupation </strong> <input type="text" id ="occupationInput" name ="occupation">
+</br><br>
+<button onclick="createPerson()" id="submit"> Submit </button>
+<p id="obj"> </p>
 
+<strong> He said "My name is Elliott" </strong>
+<button onclick="convertToCaps()"> Capitalize </button>
+<p id="caps"> </p>
+<br> </br> 
+
+1. My favourite number is... <br>
+2. 7
+<br> </br>
+<button onclick="conCat()"> Concatenate </button>
+<p id="cat"> </p>
+
+<button onclick="printArrayOne(arrayone)">  Print Array </button>
+<p id="parray"> </p>
+
+<button onclick="addToArray()">  Add Another String To Array </button>
+<p id="addarray"> </p>
+
+<button onclick="removeLast(arrayone)">  Remove Last Item From Array </button>
+<p id="remove"> </p>
 </body>
+
+<strong> Check Age is between 20-40 years : </strong> <br> </br>
+<button onclick="checkAge(person)">  Check  </button> 
+<p id="check"> </p>
 
 
 </html>
