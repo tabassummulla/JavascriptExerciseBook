@@ -143,6 +143,29 @@ if (person.age >=20 && person.age <=40 )  {
 else {
            document.getElementById("check").innerHTML= "false";
  }
+}
+
+
+
+function printForLoop(){
+var text = "";
+var i;
+for(i =0; i<=10; i++){
+   text += "Number is:  " + i + "<br>";
+
+}
+ document.getElementById("forloop").innerHTML = text;
+}
+
+function checkDivTwo(){
+var text = "";
+var i;
+for(i =0; i<=10; i++){
+    if( i %2 ==0) {
+       text += "Number is:  " + i + "<br>";  
+    }
+ document.getElementById("divloop").innerHTML = text;
+}
 
 
 }
@@ -190,5 +213,12 @@ else {
 <button onclick="checkAge(person)">  Check  </button> 
 <p id="check"> </p>
 
+<strong> For Loop 1-10 </strong> <br> </br>
+<button onclick="printForLoop()"> For Loop </button> 
+<p id="forloop"> </p>
+
+<strong> For Loop Numbers Divisible by 2 </strong> <br> </br>
+<button onclick="checkDivTwo()"> For Loop </button> 
+<p id="divloop"> </p>
 
 </html>
