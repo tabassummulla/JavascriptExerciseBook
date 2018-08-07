@@ -38,6 +38,66 @@ document.getElementById("fizzbuzz").innerHTML = text;
 }
 
 
+var number =0;
+var text = "";
+
+function iterationFour(number){
+
+number = document.getElementById("number").value;
+
+
+        if(number%3==0) {
+    
+        text += "Number divided by 3 is =" + number / 3 + "<br>";
+}
+        else {
+        number ++;
+
+        if(number%3==0) {
+
+        text += "Number is now " +number + " and this divided by 3 is " + number / 3 + "<br>"; 
+
+
+         } else {
+    
+          number = number - 2;  
+
+         if(number%3==0) {
+    
+        text += "Number is now " +number + " and this divided by 3 is " + number / 3 + "<br>"; 
+    }
+}
+
+}
+
+document.getElementById("numb").innerHTML = text;
+}
+
+var str;
+var i;
+var triple = 0;
+var output;
+
+function countTriple(str){
+
+
+str[] = document.getElementById("string").value;
+
+for(i =0; i<str.length; i++){
+
+    if(charAt(i) == charAt(i+1) == charAt(i+2)){
+
+        triple++;
+        output += "Number of triples present are :" + triple;
+    }
+
+    }
+ document.getElementById("trip").innerHTML = output;
+}
+
+
+
+
 
 
 </script>
@@ -45,6 +105,16 @@ document.getElementById("fizzbuzz").innerHTML = text;
 <strong> Fizz Buzz </strong> <br> </br>
 <button onclick="fizzBuzz(max, ifDivisibleByFive,ifDivisibleByThree)"> Loop </button> 
 <p id="fizzbuzz"> </p>
+
+<strong> Enter a Number :  </strong> <input type="text"  id ="number" name ="no">
+<br> </br>
+<button onclick="iterationFour(number)"> Check</button> 
+<p id="numb"> </p>
+
+<strong> Enter Text :  </strong> <input type="text"  id ="string" name ="st">
+<br> </br>
+<button onclick="countTriple(str)"> Count Triple</button> 
+<p id="trip"> </p>
 
 
 </body>
