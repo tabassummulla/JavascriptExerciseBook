@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+
+
+<body font= "Arial" style="height:4000px;">
+<script>
+
+var max = 100;
+var ifDivisibleByThree = "Fizz";
+var ifDivisibleByFive = "Buzz";
+
+function fizzBuzz(max, ifDivisibleByFive,ifDivisibleByThree){
+
+var text = "";
+var i;
+
+for(i=1; i<=max; i++){
+
+if(i%5==0 && i%3==0){
+     text += ifDivisibleByThree + ifDivisibleByFive   + "<br>";
+}
+else if(i%3==0) {
+     text += ifDivisibleByThree + "<br>";
+    }
+else if(i%5==0){
+     text += ifDivisibleByFive + "<br>";
+}
+else {
+    text+= "Number is :" + i + "<br>";
+}
+document.getElementById("fizzbuzz").innerHTML = text;
+}
+}
+
+
+
+
+</script>
+
+<strong> Fizz Buzz </strong> <br> </br>
+<button onclick="fizzBuzz(max, ifDivisibleByFive,ifDivisibleByThree)"> Loop </button> 
+<p id="fizzbuzz"> </p>
+
+
+</body>
+</html>
