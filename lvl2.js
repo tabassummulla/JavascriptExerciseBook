@@ -1,3 +1,4 @@
+'use strict';
 
 var max = 100;
 var ifDivisibleByThree = "Fizz";
@@ -127,3 +128,78 @@ p.removeChild(deltxt);
 p.removeAttribute(deltag);
 
 }
+
+
+let request = new XMLHttpRequest();
+
+function getJSONObjectOne(){
+
+let requestURL ="https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json";
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+
+request.onload = function() {
+
+let requestData = request.response;
+let myjson = JSON.stringify( requestData, null, 7);
+
+document.getElementById("json").innerHTML = "<pre>" + myjson + "</pre>";
+}
+
+}
+
+let requestURL = "https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/kings.json";
+
+function getJSONObjectTwo() {
+
+request.open('GET', requestURL);
+request.responseType ='json';
+request.send();
+
+request.onload = function (){
+
+    let requestData = request.response;
+    let myjson = JSON.stringify(requestData, null, 7);
+    document.getElementById("json2").innerHTML = "<pre>" + myjson + "</pre>";
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+// function searchKings() {
+
+// request.open('GET', requestURL);
+// request.responseType ='json';
+// request.send();
+
+// request.onload = function (){
+
+//     let requestData = request.response;
+//     let myjson = JSON.stringify(requestData, null, 7);
+
+//     var input =  document.getElementById("search").value;
+
+//     var json = [JSON.parse(myjson)];
+//     var results = [];
+
+//      for(i =0; i<json.length; i++){
+
+//         if(input)
+
+
+     
+
+
+
+
+
+
