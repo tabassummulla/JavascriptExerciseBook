@@ -1,0 +1,23 @@
+
+body {
+    width:50%;
+     margin: auto;
+}
+
+.buttons {
+
+
+    background-color: #e7e7e7; 
+    border: none;
+    color: black;
+    padding: 40px 50px;
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+    cursor: pointer;
+
+}

@@ -175,30 +175,32 @@ request.onload = function (){
 }
 
 
-// function searchKings() {
+function searchKings() {
 
-// request.open('GET', requestURL);
-// request.responseType ='json';
-// request.send();
+request.open('GET', requestURL);
+request.responseType ='json';
+request.send();
 
-// request.onload = function (){
+request.onload = function (){
 
-//     let requestData = request.response;
-//     let myjson = JSON.stringify(requestData, null, 7);
+    let requestData = request.response;
 
-//     var input =  document.getElementById("search").value;
+    var input =  document.getElementById("search").value;
 
-//     var json = [JSON.parse(myjson)];
-//     var results = [];
-
-//      for(i =0; i<json.length; i++){
-
-//         if(input)
+    var results = [];
 
 
+    //Searches through requestData which contains array of JSON objects 
+    //then filters for object values which include or match the input variable and a 
+    // this is then added to the results array 
+    
+    results.push(requestData.filter(a => Object.values(a).includes(input))); 
+
+    document.getElementById("searchResults").innerHTML =  "<pre>" + JSON.stringify(results, null, 4) + "</pre>";
+}
      
 
-
+}
 
 
 
